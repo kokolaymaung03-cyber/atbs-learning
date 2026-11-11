@@ -9,17 +9,22 @@
 <link rel="icon" href="./icon.svg" type="image/svg+xml">
 <title>ATBS Learning</title>
 <style>
-html,body{margin:0;width:100%;height:100%;font-family:Arial,sans-serif;background:#f4f6f4}
-.bar{height:52px;background:#123d2b;color:white;display:flex;align-items:center;padding:0 14px;font-weight:700}
-iframe{width:100%;height:calc(100% - 52px);border:0;background:white}
-#fallback{padding:18px;text-align:center}a{color:#123d2b;font-weight:bold}
+html,body{margin:0;min-height:100%;font-family:Arial,sans-serif;background:#f4f6f4;color:#123d2b}
+header{background:#123d2b;color:white;padding:18px 16px;font-size:22px;font-weight:700}
+main{padding:28px 18px;text-align:center}
+a{display:inline-block;margin-top:18px;padding:14px 22px;background:#123d2b;color:white;text-decoration:none;border-radius:8px;font-weight:700}
 </style>
 </head>
 <body>
-<div class="bar">ATBS LEARNING</div>
-<iframe id="app" title="ATBS Learning" src="https://script.google.com/macros/s/AKfycbyxAS0uTEGxKaVBdUeA0u6CBNCZMJgcIxrSxZBvO7W_je7gjCl00CS9fmPmFbr-4hP7/exec" allow="clipboard-read; clipboard-write"></iframe>
-<div id="fallback" hidden><p>If the app does not appear, open it directly:</p><a href="https://script.google.com/macros/s/AKfycbyxAS0uTEGxKaVBdUeA0u6CBNCZMJgcIxrSxZBvO7W_je7gjCl00CS9fmPmFbr-4hP7/exec">Open ATBS Learning</a></div>
+<header>ATBS LEARNING</header>
+<main>
+<p>Opening ATBS Learning…</p>
+<p>If it does not open automatically, tap below.</p>
+<a href="https://script.google.com/macros/s/AKfycbyxAS0uTEGxKaVBdUeA0u6CBNCZMJgcIxrSxZBvO7W_je7gjCl00CS9fmPmFbr-4hP7/exec">OPEN ATBS LEARNING</a>
+</main>
 <script>
-if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js").catch(()=>{}));}
+if("serviceWorker" in navigator){navigator.serviceWorker.register("./service-worker.js").catch(()=>{});}
+window.location.replace("https://script.google.com/macros/s/AKfycbyxAS0uTEGxKaVBdUeA0u6CBNCZMJgcIxrSxZBvO7W_je7gjCl00CS9fmPmFbr-4hP7/exec");
 </script>
-</body></html>
+</body>
+</html>
