@@ -9,22 +9,33 @@
 <link rel="icon" href="./icon.svg" type="image/svg+xml">
 <title>ATBS Learning</title>
 <style>
+*{box-sizing:border-box}
 html,body{margin:0;min-height:100%;font-family:Arial,sans-serif;background:#f4f6f4;color:#123d2b}
-header{background:#123d2b;color:white;padding:18px 16px;font-size:22px;font-weight:700}
-main{padding:28px 18px;text-align:center}
-a{display:inline-block;margin-top:18px;padding:14px 22px;background:#123d2b;color:white;text-decoration:none;border-radius:8px;font-weight:700}
+body{min-height:100vh;display:flex;flex-direction:column}
+header{background:#123d2b;color:#fff;padding:20px 16px;text-align:center;font-size:23px;font-weight:700;letter-spacing:.5px}
+main{width:min(92%,480px);margin:auto;text-align:center;padding:34px 20px;background:#fff;border-radius:14px;box-shadow:0 5px 24px #00000012}
+h1{font-size:22px;margin:0 0 8px}
+p{color:#53645b;line-height:1.55}
+a{display:block;margin:24px auto 8px;padding:16px 20px;max-width:320px;background:#123d2b;color:#fff;text-decoration:none;border-radius:9px;font-weight:700}
+a:focus,a:hover{background:#1d6044}
+small{display:block;margin-top:22px;color:#68756e}
+footer{text-align:center;padding:18px;color:#68756e;font-size:12px}
 </style>
 </head>
 <body>
 <header>ATBS LEARNING</header>
 <main>
-<p>Opening ATBS Learning…</p>
-<p>If it does not open automatically, tap below.</p>
+<h1>ASIAN THEOLOGICAL BIBLE SEMINARY</h1>
+<p>Student &amp; Administrator Learning Portal</p>
+<p>Press the button below to open the student login system.</p>
 <a href="https://script.google.com/macros/s/AKfycbyxAS0uTEGxKaVBdUeA0u6CBNCZMJgcIxrSxZBvO7W_je7gjCl00CS9fmPmFbr-4hP7/exec">OPEN ATBS LEARNING</a>
+<small>For students and administrators</small>
 </main>
+<footer>© 2026 ASIAN THEOLOGICAL BIBLE SEMINARY</footer>
 <script>
-if("serviceWorker" in navigator){navigator.serviceWorker.register("./service-worker.js").catch(()=>{});}
-window.location.replace("https://script.google.com/macros/s/AKfycbyxAS0uTEGxKaVBdUeA0u6CBNCZMJgcIxrSxZBvO7W_je7gjCl00CS9fmPmFbr-4hP7/exec");
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => navigator.serviceWorker.register("./service-worker.js").catch(() => {}));
+}
 </script>
 </body>
 </html>
