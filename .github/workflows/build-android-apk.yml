@@ -2,6 +2,10 @@ name: Build ATBS Learning APK
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'android/**'
+      - '.github/workflows/build-android-apk.yml'
 
 permissions:
   contents: read
